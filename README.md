@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## commands
+echo "# tdd" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hassennuman/tdd.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/hassennuman/tdd.git
+git branch -M main
+git push -u origin main
