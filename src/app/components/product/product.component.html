@@ -1,0 +1,23 @@
+<div class="product">
+  <div class="detail-container" *ngIf="selectedProduct">
+    <div class="detail">
+      <h4>Product Details</h4>
+
+      <div *ngFor="let template of selectedProduct.templates">
+        <app-section
+          *ngFor="let section of template.sections"
+          [section]="section"
+          (sectionSelected)="onSectionSelected($event)"
+        >
+        </app-section>
+      </div>
+
+    </div>
+    <div class="question">
+        <app-question [section]="selectedSection"></app-question>
+
+    </div>
+   
+   
+  </div>
+</div>

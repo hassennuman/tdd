@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatTabsModule } from '@angular/material/tabs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +13,10 @@ import { MutualFundStrategyRequestComponent } from './components/mutual-fund-str
 import { SectionComponent } from './components/section/section.component';
 import { QuestionComponent } from './components/question/question.component';
 import { SubQuestionComponent } from './components/sub-question/sub-question.component';
+import { ProductComponent } from './components/product/product.component';
+import { StrategyComponent } from './components/strategy/strategy.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { StrategyListComponent } from './components/strategy-list/strategy-list.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,16 @@ import { SubQuestionComponent } from './components/sub-question/sub-question.com
     MutualFundStrategyRequestComponent,
     SectionComponent,
     QuestionComponent,
-    SubQuestionComponent
+    SubQuestionComponent,
+    ProductComponent,
+    StrategyComponent,
+    StrategyListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

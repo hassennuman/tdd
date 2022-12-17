@@ -1,5 +1,5 @@
 <div class="dashboard">
-  <div class="section" *ngFor="let fund of funds">
+  <!-- <div class="section" *ngFor="let fund of funds">
     <app-section *ngFor="let section of fund.sections" 
      [section]="section" (sectionSelected)="onSectionSelected($event)"
      > </app-section>
@@ -7,5 +7,26 @@
 
   <div class="question">
     <app-question [section]="selectedSection"></app-question>
-  </div>
+  </div> -->
+  <mat-tab-group
+    mat-align-tabs="left"
+    (selectedTabChange)="onTabChanged($event)"
+  >
+    <mat-tab label="Due Diligence Dashboard">
+      <div class="diligence">
+        <app-strategy-list
+          *ngIf="!isStrategySelected"
+          (selectedStrategy)="onSelectedStrategy($event)"
+        ></app-strategy-list>
+        <app-strategy
+          *ngIf="isStrategySelected"
+          [selectedStrategy]="selectedStrategy"
+        ></app-strategy>
+      </div>
+    </mat-tab>
+    <mat-tab label="Reporting">
+      <div class="reporting">Coming soon!!</div>
+    </mat-tab>
+  </mat-tab-group>
+  
 </div>
