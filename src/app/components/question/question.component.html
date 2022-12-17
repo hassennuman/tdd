@@ -1,0 +1,8 @@
+<div class="question" *ngIf="section">
+    <h3>{{section.title}}</h3>
+     <div *ngFor="let q of section.questions">
+        <h4>{{q.id}} {{q.question}}</h4>
+        <input *ngIf="q.inputType !== 'textarea'" type="{{q.inputType"}} >
+        <textarea *ngIf="q.inputType === 'textarea'"></textarea>
+     </div>
+</div>

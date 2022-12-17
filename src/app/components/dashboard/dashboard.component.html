@@ -1,0 +1,11 @@
+<div class="dashboard">
+  <div class="section" *ngFor="let fund of funds">
+    <app-section *ngFor="let section of fund.sections" 
+     [section]="section" (sectionSelected)="onSectionSelected($event)"
+     > </app-section>
+  </div>
+
+  <div class="question">
+    <app-question [section]="selectedSection"></app-question>
+  </div>
+</div>
