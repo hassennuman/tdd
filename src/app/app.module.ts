@@ -7,8 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { DocumentListComponent } from './components/document-list/document-list.component';
-import { DocumentComponent } from './components/document-list/document/document.component';
 import { SectionComponent } from './components/section/section.component';
 import { QuestionComponent } from './components/question/question.component';
 import { SubQuestionComponent } from './components/sub-question/sub-question.component';
@@ -25,9 +23,6 @@ import { QuestionListComponent } from './components/question-list/question-list.
     FooterComponent,
     SidebarComponent,
     DashboardComponent,
-    DocumentListComponent,
-    DocumentComponent,
-  
     SectionComponent,
     QuestionComponent,
     SubQuestionComponent,
