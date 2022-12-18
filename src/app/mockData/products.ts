@@ -1,84 +1,78 @@
 import { IProduct } from '../models/model';
-import {templates} from '../mockData/template';
-export const products1: IProduct[] = [
-  {
-    id: 1,
-    title: 'Product 1',
-    templates : templates
-  },
-  {
-    id: 2,
-    title: 'Product 2',
-    templates : templates
-  },
-  {
-    id: 3,
-    title: 'Product 3',
-    templates : templates
-  },
-];
-export const products2: IProduct[] = [
-  {
-    id: 4,
-    title: 'Product 4',
-    templates : templates
-  },
-  {
-    id: 5,
-    title: 'Product 5',
-    templates : templates
-  },
-  {
-    id: 6,
-    title: 'Product 6',
-    templates : templates
-  },
-  {
-    id: 7,
-    title: 'Product 7',
-    templates : templates
-  },
-  {
-    id: 8,
-    title: 'Product 8',
-    templates : templates
-  },
-  {
-    id: 9,
-    title: 'Product 9',
-    templates : templates
-  },
-];
+import { template1, template2, } from '../mockData/template';
+import { Action, FinalStatus, ReviewType, YesNo } from '../enums/constants';
 
-export const products3: IProduct[] = [
+export const products: IProduct[] = [
   {
-    id: 10,
-    title: 'Product 10',
-    templates : templates
+    id: '1',
+    strategyManager: 'Manager 1',
+    strategyName: 'Demo Product 1',
+    reviewType: ReviewType.InitialDueDiligence,
+    requestReceivedOn: new Date().toLocaleDateString(),
+    requestSendOn: new Date().toLocaleDateString(),
+    finalStatus: FinalStatus.Received,
+    action: Action.Review,
+    receivedPerSLA: YesNo.Yes,
+    templates : template1
   },
   {
-    id: 11,
-    title: 'Product 11',
-    templates : templates
+    id: '2',
+    strategyManager: 'Manager 2',
+    strategyName: 'Demo Product 2',
+    reviewType: ReviewType.InitialDueDiligence,
+    requestReceivedOn: new Date().toLocaleDateString(),
+    requestSendOn: new Date().toLocaleDateString(),
+    finalStatus: FinalStatus.Completed,
+    action: Action.Review,
+    receivedPerSLA: YesNo.Yes,
+    templates :template2
   },
   {
-    id: 12,
-    title: 'Product 12',
-    templates : templates
+    id: '3',
+    strategyManager: 'Manager 3',
+    strategyName: 'Demo Strategy 3',
+    reviewType: ReviewType.InitialDueDiligence,
+    requestReceivedOn: new Date().toLocaleDateString(),
+    requestSendOn: new Date().toLocaleDateString(),
+    finalStatus: FinalStatus.Received,
+    action: Action.SendFollowUpToManager,
+    receivedPerSLA: YesNo.Yes,
+    templates  : template1
   },
   {
-    id: 13,
-    title: 'Product 13',
-    templates : templates
+    id: '4',
+    strategyManager: 'Manager 3',
+    strategyName: 'Demo Strategy 4',
+    reviewType: ReviewType.InitialDueDiligence,
+    requestReceivedOn: new Date().toLocaleDateString(),
+    requestSendOn: new Date().toLocaleDateString(),
+    finalStatus: FinalStatus.Received,
+    action: Action.View,
+    receivedPerSLA: YesNo.Yes,
+    templates : template2
   },
   {
-    id: 14,
-    title: 'Product 14',
-    templates : templates
+    id: '5',
+    strategyManager: 'Manager 2',
+    strategyName: 'Demo Strategy 6',
+    reviewType: ReviewType.InitialDueDiligence,
+    requestReceivedOn: new Date().toLocaleDateString(),
+    requestSendOn: new Date().toLocaleDateString(),
+    finalStatus: FinalStatus.Received,
+    action: Action.Review,
+    receivedPerSLA: YesNo.Yes,
+    templates: template1
   },
   {
-    id: 15,
-    title: 'Product 15',
-    templates : templates
+    id: '6',
+    strategyManager: 'Manager 2',
+    strategyName: 'Demo Strategy 6',
+    reviewType: ReviewType.InitialDueDiligence,
+    requestReceivedOn: new Date().toLocaleDateString(),
+    requestSendOn: new Date().toLocaleDateString(),
+    finalStatus: FinalStatus.Received,
+    action: Action.ApprovalPending,
+    receivedPerSLA: YesNo.Yes,
+    templates : template2
   },
 ];

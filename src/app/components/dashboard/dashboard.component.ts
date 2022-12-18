@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FundService } from 'src/app/services/fund.service';
-import { IFundType, IQuestion, ISection, IStrategy } from 'src/app/models/model';
+import { ProductService } from 'src/app/services/product.service';
+import { IQuestion, ISection, IProduct } from 'src/app/models/model';
 
 import { Router } from '@angular/router';
 import { MatTabChangeEvent } from '@angular/material/tabs';
@@ -12,24 +12,24 @@ import { MatTabChangeEvent } from '@angular/material/tabs';
 })
 export class DashboardComponent implements OnInit {
   
-  funds : IFundType[] = [];
+  products : IProduct[] = [];
   selectedSection : ISection;
   questions : IQuestion[];
-  selectedStrategy : IStrategy;
-  isStrategySelected : boolean = false;
+  selectedProduct : IProduct;
+  isProductSelected : boolean = false;
 
-  constructor(private fundService : FundService, private router : Router) { }
+  constructor(private service : ProductService, private router : Router) { }
 
   ngOnInit(): void {
-    this.fundService.getTemplates().subscribe((data)=>{
-      this.funds = data;
-      console.log(this.funds);
+    this.service.getProducts().subscribe((data)=>{
+      this.products = data;
+    
     })
   }
 
-  onSelectedStrategy(strategy : IStrategy){
-    this.selectedStrategy = strategy;
-    this.isStrategySelected = true;
+  onProductSelect(product : IProduct){
+    this.selectedProduct = product;
+    this.isProductSelected = true;
   }
   onSectionSelected(section : ISection){
     console.log("Selected Section", section);

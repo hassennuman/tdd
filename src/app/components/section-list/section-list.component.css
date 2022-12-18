@@ -1,0 +1,26 @@
+.section-list-container{
+    display: flex;
+}
+
+.section-container {
+  box-sizing: border-box;
+  flex-grow: 20%;
+}
+.section-title {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.section-title:hover{
+    color: cadetblue;
+    font-weight: bolder;
+}
+
+.section-detail {
+  flex-grow: 80%;
+}

@@ -14,9 +14,10 @@ import { SectionComponent } from './components/section/section.component';
 import { QuestionComponent } from './components/question/question.component';
 import { SubQuestionComponent } from './components/sub-question/sub-question.component';
 import { ProductComponent } from './components/product/product.component';
-import { StrategyComponent } from './components/strategy/strategy.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { StrategyListComponent } from './components/strategy-list/strategy-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { SectionListComponent } from './components/section-list/section-list.component';
+import { QuestionListComponent } from './components/question-list/question-list.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { StrategyListComponent } from './components/strategy-list/strategy-list.
     QuestionComponent,
     SubQuestionComponent,
     ProductComponent,
-    StrategyComponent,
-    StrategyListComponent
+    ProductListComponent,
+    SectionListComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,

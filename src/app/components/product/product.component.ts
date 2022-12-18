@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IProduct, ISection, IStrategy } from 'src/app/models/model';
+import { IProduct, ISection, ITemplate } from 'src/app/models/model';
 
 
 @Component({
@@ -8,19 +8,21 @@ import { IProduct, ISection, IStrategy } from 'src/app/models/model';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() selectedStrategy : IStrategy;
+  
   @Input() selectedProduct : IProduct;
+  templates : ITemplate[] = [];
   selectedSection : ISection;
 
   constructor() { }
 
   ngOnInit(): void {
+    if (this.selectedProduct){
+      this.templates = this.selectedProduct.templates;
+    }
     
   }
 
   onSectionSelected(section : ISection){
-    console.log("Selected Section", section);
-    
    this.selectedSection = section;
   }
 

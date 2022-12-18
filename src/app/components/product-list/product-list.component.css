@@ -1,12 +1,11 @@
-.product-container{
-    display: flex;
+.product-list-container{
+ 
     margin: 20px;
 }
 
-.product{
+.product-list{
     padding: 10px;
     border: 1px solid black;
     text-align: center;
-    
-}
 
+}

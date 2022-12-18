@@ -1,7 +1,0 @@
-<div class="strategy" *ngIf="selectedStrategy">
-  <h3>{{ selectedStrategy.strategyName }}</h3>
-  <select *ngIf="!selectedProductId" id="dpProduct" class="dpProduct" (change)="onSelectedProduct($event)">
-    <option *ngFor="let product of selectedStrategy.products"  value="{{product.id}}">{{ product.title }}</option>
-  </select>
-  <app-product *ngIf="selectedProductId && selectedProduct" [selectedProduct]="selectedProduct"></app-product>
-</div>

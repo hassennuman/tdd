@@ -1,5 +1,5 @@
 import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
-import { ISection } from 'src/app/models/model';
+import { IQuestion, ISection } from 'src/app/models/model';
 
 @Component({
   selector: 'app-section',
@@ -7,14 +7,21 @@ import { ISection } from 'src/app/models/model';
   styleUrls: ['./section.component.css'],
 })
 export class SectionComponent implements OnInit {
-  @Input() section : ISection ;
+  @Input() selectedSection : ISection ;
+  questions : IQuestion[] = [];
 
   @Output() sectionSelected : EventEmitter<ISection> = new EventEmitter();
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("section", this.selectedSection)
+    if (this.selectedSection){
+      this.questions = this.selectedSection.questions;
+    }
+  }
 
-  onSectionClick(){
-    this.sectionSelected.emit(this.section);
+  onSectionClick(section : ISection){
+    //this.sectionSelected.emit(this.section);
+    
   }
 }

@@ -1,0 +1,11 @@
+<div class="section-list-container" *ngIf="isSectionsExist">
+  <div class="section-container">
+    <div class="section-title" *ngFor="let section of sections">
+      <span (click)="onSectionSelect(section)">{{ section.title }}</span>
+    </div>
+  
+  </div>
+  <div class="section-detail">
+    <app-section [selectedSection]="seletedSection"></app-section>
+  </div>
+</div>

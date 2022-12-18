@@ -1,9 +1,11 @@
-<div class="question" *ngIf="section">
-    <h3>{{section.title}}</h3>
-     <div *ngFor="let q of section.questions" 
-       [ngClass]="{'question-container' : q.inputType === 'textarea' }" >
-        <label>{{q.id}} {{q.question}} {{q.inputType}}</label>
-        <input *ngIf="q.inputType !== 'textarea'" placeholder="{{q.question}}" type="{{q.inputType}}" >
-        <textarea *ngIf="q.inputType === 'textarea'"></textarea>
-     </div>
+<div class="question-container" *ngIf="question">
+  <div class="question">
+    <label>{{ question.question }}</label>
+    <input
+      *ngIf="question.inputType !== 'textarea'"
+      placeholder="{{ question.question }}"
+      type="{{ question.inputType }}"
+    />
+    <textarea *ngIf="question.inputType === 'textarea'"></textarea>
+  </div>
 </div>

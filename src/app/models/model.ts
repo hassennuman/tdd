@@ -17,27 +17,14 @@ export interface IQuestion extends IBase {
 }
 
 export interface ISection extends IBase {
-  questions?: IQuestion[];
+  questions: IQuestion[];
 }
 
-export interface IFundType extends IBase {
-  sections?: ISection[];
+export interface ITemplate extends IBase {
+  sections : ISection[];
 }
 
 export interface IProduct extends IBase {
-  imcName?: string;
-  address?: string;
-  phone?: string;
-  fax?: string;
-  email?: string;
-  dateSubmission?: string;
-  country?: string;
-  fundName?: string;
-  isinBloomberTicker?: string;
-  templates? : IFundType[];
-}
-
-export interface IStrategy extends IBase {
   strategyManager: string;
   strategyName: string;
   requestSendOn: Date | string;
@@ -46,5 +33,5 @@ export interface IStrategy extends IBase {
   reviewType: ReviewType;
   action: Action;
   receivedPerSLA: YesNo;
-  products?: IProduct[];
+  templates : ITemplate[];
 }

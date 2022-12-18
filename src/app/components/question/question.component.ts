@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ISection } from 'src/app/models/model';
+import { IQuestion, ISection } from 'src/app/models/model';
 
 @Component({
   selector: 'app-question',
@@ -9,6 +9,7 @@ import { ISection } from 'src/app/models/model';
 export class QuestionComponent implements OnInit {
   @Input() section : ISection;
   isTextArea : boolean = false;
+  @Input() question : IQuestion;
   constructor() { }
 
   ngOnInit(): void {
