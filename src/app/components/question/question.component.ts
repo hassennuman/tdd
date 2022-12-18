@@ -8,9 +8,11 @@ import { ISection } from 'src/app/models/model';
 })
 export class QuestionComponent implements OnInit {
   @Input() section : ISection;
+  isTextArea : boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

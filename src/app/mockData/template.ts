@@ -8,7 +8,60 @@ import {
 export const templates: IFundType[] = [
   {
     id: 'tpmfsri',
-    sections: [
+    sections: [{
+      id : 0,
+      title : 'Product Details',
+      questions : [
+        {
+          id : '0.1',
+          question : "imcName",
+          inputType : 'text'
+        },
+        {
+          id : '0.2',
+          question : "address",
+          inputType : 'text'
+        },
+        {
+          id : '0.3',
+          question : "phone",
+          inputType : 'text'
+        },
+        {
+          id : '0.4',
+          question : "fax",
+          inputType : 'text'
+        },
+        {
+          id : '0.5',
+          question : "email",
+          inputType : 'email'
+        },
+        {
+          id : '0.6',
+          question : "date  submission",
+          inputType : 'date'
+        },
+        {
+          id : '0.7',
+          question : "country",
+          inputType : 'button'
+        },
+        {
+          id : '0.8',
+          question : "fund Name",
+          inputType : 'text'
+        },
+        {
+          id: '0.9',
+          question : "Is Complete",
+          inputType : "checkbox"
+          
+        }
+
+      ]
+
+    },
       {
         id: 1,
         title: 'important product restriction disclosures',

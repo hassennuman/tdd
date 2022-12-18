@@ -1,3 +1,24 @@
 textarea{
     width: 100%;
 }
+
+input, label{
+    margin: 10px;
+    padding: 10px;
+}
+
+input[type='button']{
+    background-color: black;
+    color: #fff;
+}
+
+.question-container{
+   display: flex;
+   padding: 10px;
+   flex-direction: column;
+}
+
+.question-container > *{
+    margin: 10px;
+}
+
