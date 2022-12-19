@@ -6,14 +6,15 @@ export interface IBase {
 }
 
 export interface ISubQuestion extends IBase {
-  question: string;
-  inputType: string;
+  //question: string;
+  //inputType: string;
+  questions : IQuestion[];
 }
 
 export interface IQuestion extends IBase {
   question: string;
   inputType: string;
-  subQuestions?: ISubQuestion[];
+  subQuestions? : ISubQuestion[];
 }
 
 export interface ISection extends IBase {

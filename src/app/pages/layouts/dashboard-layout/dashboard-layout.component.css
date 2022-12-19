@@ -1,0 +1,12 @@
+.dashboard-layout {
+  display: block;
+}
+
+.main-section {
+  background: yellow;
+  display: flex;
+}
+.select-product {
+  font-size: 1.4rem;
+  margin: 20px;
+}

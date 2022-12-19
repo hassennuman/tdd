@@ -1,11 +1,13 @@
 .product-list-container{
- 
-    margin: 20px;
+    width: 100%;
+   
+    display: block;
 }
-
+.left-nav{
+  flex-basis: 10%;
+}
 .product-list{
     padding: 10px;
-    border: 1px solid black;
-    text-align: center;
-
+    border: 2px solid black;  
 }
+

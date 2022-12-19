@@ -8,4 +8,7 @@
     />
     <textarea *ngIf="question.inputType === 'textarea'"></textarea>
   </div>
+   <div class="subquestion">
+    <app-sub-question [subQuestions]="subQuestions"></app-sub-question>
+   </div>
 </div>

@@ -1,0 +1,47 @@
+.header-container {
+  height: 150px;
+  background: #020d2e;
+  border: 2px solid black;
+  color: aliceblue;
+  border-radius: 10px;
+}
+
+.header-container header nav {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60px;
+}
+.logo img {
+  width: 100%;
+}
+
+.title {
+  flex: 4;
+  margin-left: 10px;
+}
+.title span {
+  display: inline-block;
+  max-width: 150px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.notification,
+.profile {
+  max-width: 40px;
+  height: auto;
+  margin: 5px;
+}
+
+.notification img,
+.profile img {
+  display: inline-block;
+  width: 100%;
+  border-radius: 50%;
+}

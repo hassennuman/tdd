@@ -15,6 +15,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { SectionListComponent } from './components/section-list/section-list.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
+import { DashboardLayoutComponent } from './pages/layouts/dashboard-layout/dashboard-layout.component';
+import { NoPageComponent } from './pages/no-page/no-page.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { QuestionListComponent } from './components/question-list/question-list.
     ProductComponent,
     ProductListComponent,
     SectionListComponent,
-    QuestionListComponent
+    QuestionListComponent,
+    DashboardLayoutComponent,
+    NoPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,4 @@
-<p>sub-question works!</p>
+<div class="sub-question">
+  <app-question-list *ngFor="let subquestion of subQuestions" [questions]="subquestion.questions"> </app-question-list>
+    
+</div>

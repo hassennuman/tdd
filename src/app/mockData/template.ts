@@ -85,16 +85,72 @@ export const template1: ITemplate[] = [
         questions: [
           {
             id: '3.1',
-            question:
-              'from the table presented in 2.1 indicted in 2.2 indicate the individuals who are 1) key Desition makers; 2) Lead partfolio mannager; 3) Back-up managers. For these individuals, provide educational background. ',
+            question: 'What is A',
             inputType: 'textarea',
             subQuestions: [
               {
                 id: '3.1.1',
-                question: '',
-                inputType: 'text_area',
+                questions: [
+                  {
+                    id: '3.1.1.1',
+                    question: 'What is AA?',
+                    inputType: 'textarea',
+                    subQuestions : [
+                      {
+                        questions : [
+                          {
+                            id: '3.1.1.1.1 ',
+                            question: 'What is AAA?',
+                            inputType: 'textarea',
+                            subQuestions : []
+                          },
+                          {
+                            id: '3.1.1.1.2 ',
+                            question: 'What is AAB?',
+                            inputType: 'textarea',
+                            subQuestions : []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    id: '3.1.1.2',
+                    question: 'What is AB?',
+                    inputType: 'textarea',
+
+                  },
+                ],
               },
             ],
+          },
+          {
+            id: '3.2',
+            question: 'What is B',
+            inputType: 'textarea',
+          },
+          {
+            id: '3.3',
+            question: 'What is C',
+            inputType: 'textarea',
+            subQuestions : [
+              {
+                questions : [
+                  {
+                    id: '3.3.1 ',
+                    question: 'What is CA?',
+                    inputType: 'textarea',
+                    subQuestions : []
+                  },
+                  {
+                    id: '3.3.2 ',
+                    question: 'What is CB?',
+                    inputType: 'textarea',
+                    subQuestions : []
+                  }
+                ]
+              }
+            ]
           },
         ],
       },
@@ -174,7 +230,7 @@ export const template2: ITemplate[] = [
             inputType: 'checkbox',
           },
         ],
-      }
+      },
     ],
   },
 ];

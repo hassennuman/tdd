@@ -1,13 +1,12 @@
 <div class="product-list-container">
-    <span>Prodcuts</span>
-  <select
-    class="product-list"
-    (change)="onChangeProduct($event)"
-  >
-    <option *ngFor="let product of products" value="{{ product.id }}">
-      {{ product.strategyName }}
-    </option>
-  </select>
+  <div class="left-nav">
+    <select class="product-list" (change)="onChangeProduct($event)">
+      <option *ngFor="let product of products" value="{{ product.id }}">
+        {{ product.strategyName }}
+      </option>
+    </select>
+  </div>
+
   <div class="selectedProduct" *ngIf="isProductSelected">
     <app-product [selectedProduct]="selectedProduct"></app-product>
   </div>
