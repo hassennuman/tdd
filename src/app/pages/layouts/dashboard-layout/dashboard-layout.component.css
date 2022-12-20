@@ -3,8 +3,9 @@
 }
 
 .main-section {
-  background: yellow;
-  display: flex;
+  background:  #020d2e;
+  display: block;
+  color: #fff;
 }
 .select-product {
   font-size: 1.4rem;

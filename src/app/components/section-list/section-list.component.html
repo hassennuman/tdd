@@ -1,7 +1,7 @@
 <div class="section-list-container" *ngIf="isSectionsExist">
   <div class="section-container">
     <div class="section-title" *ngFor="let section of sections">
-      <span (click)="onSectionSelect(section)">{{ section.title }}</span>
+      <a (click)="onSectionSelect(section)">{{ section.title }}</a>
     </div>
   
   </div>

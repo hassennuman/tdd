@@ -4,7 +4,8 @@
 
 .section-container {
   box-sizing: border-box;
-  flex-grow: 20%;
+  max-width: 400px;
+  min-width: 250px;
 }
 .section-title {
   display: flex;
@@ -14,6 +15,7 @@
   border: 1px solid #000;
   text-transform: uppercase;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .section-title:hover{
@@ -22,5 +24,6 @@
 }
 
 .section-detail {
-  flex-grow: 80%;
+  flex-basis: 75%;
+  
 }

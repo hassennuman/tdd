@@ -1,29 +1,40 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { IProduct, ISection, ITemplate } from 'src/app/models/model';
-
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
 })
-export class ProductComponent implements OnInit {
-  
-  @Input() selectedProduct : IProduct;
-  templates : ITemplate[] = [];
-  selectedSection : ISection;
+export class ProductComponent implements OnInit, OnChanges {
+  @Input() selectedProduct: IProduct;
+  templates: ITemplate[] = [];
+  selectedSection: ISection;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    if (this.selectedProduct){
+    this.selectProduct();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.selectProduct();
+  }
+
+  selectProduct() {
+    if (this.selectedProduct) {
       this.templates = this.selectedProduct.templates;
+      console.log('Product', this.selectedProduct.id);
     }
-    
   }
 
-  onSectionSelected(section : ISection){
-   this.selectedSection = section;
+  onSectionSelected(section: ISection) {
+    this.selectedSection = section;
   }
-
 }
